@@ -3,7 +3,8 @@ const router = express.Router();
 const multer = require('multer');
 const db = require('../config/db');
 const cloudinary = require('../config/cloudinary');
-const { uploadImage } = require('../controllers/uploadController');
+const { uploadImage } = require('../controllers/UploadController');
+const userRoutes = require('./userRoutes');
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
@@ -50,5 +51,7 @@ router.post('/events', async (req, res) => {
     });
   }
 });
+
+router.use('/users', userRoutes);
 
 module.exports = router;
