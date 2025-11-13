@@ -12,6 +12,7 @@ const EventController = {
   },
 
   // GET /api/events
+  
   async getAllEvents(req, res) {
     try {
       const events = await EventService.getAllEvents();

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const EventController = require('../controllers/eventController');
+const EventController = require('../controllers/EventController');
 const authMiddleware = require('../middlewares/AuthMiddleware');
 
 // === Rute Event ===
