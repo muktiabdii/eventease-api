@@ -2,7 +2,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const { jwt: jwtConfig } = require("../config/env");
-const { uploadToCloudinary } = require("../config/cloudinary");
 
 const UserService = {
   async register({ name, email, password, profile_picture }) {
